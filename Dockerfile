@@ -1,7 +1,10 @@
-FROM ubuntu:focal-20200423
+FROM ubuntu
 
-RUN apt-get update -qqy
-RUN apt-get install -qqy lsb-core
+COPY . /work
 
-WORKDIR /root
-ENTRYPOINT ["bash"]
+WORKDIR /work
+
+RUN apt-get update
+RUN apt-get install -y nano fish
+
+CMD ["echo", "foo"]
