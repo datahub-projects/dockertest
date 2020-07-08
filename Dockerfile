@@ -1,10 +1,5 @@
 FROM ubuntu:18.04
-RUN apt-get update
-RUN apt-get install -y python3
-RUN apt-get install -y python3-pip
-RUN apt-get install -y nano
-RUN apt-get install -y fish
-RUN apt-get install -y curl
+RUN apt-get update && apt-get install -y python3 python3-pip nano fish curl
 
 RUN adduser --disabled-password --gecos '' ubuntu
 
