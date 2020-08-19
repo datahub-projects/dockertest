@@ -9,7 +9,6 @@ RUN apt-get install -y rclone
 
 RUN adduser --disabled-password --gecos '' ubuntu
 
-COPY . /home/ubuntu
-WORKDIR /home/ubuntu
+WORKDIR /home/rexec
 
 CMD ["python3", "entrypoint.py"]
